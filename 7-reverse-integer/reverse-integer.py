@@ -11,6 +11,8 @@ class Solution:
             result += ans[i]*10**(n-i-1)
         if result > 2**31 - 1 :
             return 0
+        elif result < -1*2**31 - 1 :
+            return 0
         return result if x > 0 else -1*result
 
 
