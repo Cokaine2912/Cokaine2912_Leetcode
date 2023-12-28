@@ -6,17 +6,13 @@ class Solution:
         d = {"a","e","i","o","u","A","E","I","O","U"}
 
         while i < j :
-            if a[i] in d and a[j] in d  :
-                a[i],a[j] = a[j],a[i]
+            while i< j and a[i] not in d :
                 i += 1
+            while i < j and a[j] not in d :
                 j -= 1
-            elif a[i] in d and a[j] not in d :
-                j -= 1
-            elif a[i] not in d and a[j] in d :
-                i += 1
-            else :
-                i += 1
-                j -= 1
+            a[i],a[j] = a[j],a[i] 
+            i += 1
+            j -= 1
         return "".join(a)
 
 
