@@ -6,7 +6,7 @@ class Solution:
                     arr[j-1],arr[j] = arr[j],arr[j-1]
         return arr
     def closeStrings(self, word1: str, word2: str) -> bool:
-        if set(word1) != set(word2) :
+        if set(word1) != set(word2) or len(word1) != len(word2) :
             return False
         d1 = {}
         for ele in word1 :
