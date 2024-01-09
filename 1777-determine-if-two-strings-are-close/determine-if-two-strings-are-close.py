@@ -1,10 +1,10 @@
 class Solution:
-    def s(arr) :
-        for i in range(len(arr)- 1 ) :
-            for j in range(1,len(arr)) :
-                if arr[j-1] > arr[j] :
-                    arr[j-1],arr[j] = arr[j],arr[j-1]
-        return arr
+    # def s(arr) :
+    #     for i in range(len(arr)- 1 ) :
+    #         for j in range(1,len(arr)) :
+    #             if arr[j-1] > arr[j] :
+    #                 arr[j-1],arr[j] = arr[j],arr[j-1]
+    #     return arr
     def closeStrings(self, word1: str, word2: str) -> bool:
         if set(word1) != set(word2) or len(word1) != len(word2) :
             return False
@@ -24,4 +24,4 @@ class Solution:
         one = [d1[i] for i in d1]
         two = [d2[j] for j in d2]
 
-        return True if Solution.s(one) == Solution.s(two) else False
+        return True if sorted(one) == sorted(two) else False
