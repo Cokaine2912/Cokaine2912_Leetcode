@@ -6,11 +6,11 @@ class Solution:
         two = 2**31 - 1
 
         for third in nums :
-            if third <= one :
+            if third < one :
                 one = third
-            elif third <= two :
+            elif third < two and third > one :
                 two = third
-            if one < two < third :
-                return True 
+            elif third > two :
+                return True
         return False     
         
