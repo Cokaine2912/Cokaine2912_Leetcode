@@ -1,11 +1,10 @@
 class Solution:
     def groupAnagrams(self, strs) :
         
-
         d = {}
 
         for ele in strs :
-            # print(d)
+            
             s = "".join(sorted(ele))
             if s in d :
                 temp = d[s]
@@ -14,10 +13,9 @@ class Solution:
             else :
                 d[s] = [ele]
 
-        # print(d)
+      
         
-        ans = []
-        for ele in d :
-          ans.append(d[ele])
+        ans = [d[k] for k in d]
+        
         return ans
         
