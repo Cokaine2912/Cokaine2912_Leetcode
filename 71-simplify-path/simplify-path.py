@@ -2,8 +2,7 @@ class Solution:
     def simplifyPath(self, path: str) -> str:
 
         k = path.split("/")
-        print(k)
-        
+                
         stack = []
         for ele in k :
             if ele == "" or ele == "/" or ele =="." :
@@ -14,7 +13,7 @@ class Solution:
                 pass
             else :
                 stack.append(ele)
-        print(stack)
+        
         ans = ""
         for ele in stack :
             ans += "/" + ele
